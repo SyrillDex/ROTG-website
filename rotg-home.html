@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rice on the go!</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    body{
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .header{
+      display: flex;
+      justify-content: space-between;
+      background-color: #ffb703;
+      height: 50px;
+      font-family: Montserrat;
+    }
+    .map-button{
+      background-color: transparent;
+      border: none;
+      font-size: 22px;
+      margin-left: 10px;
+      color: #023047;
+    }
+    .map-link{
+      color: #023047;
+    }
+    .ol-pay-button{
+      background-color: #023047;
+      border-radius: 50px;
+      color: white;
+      font-size: 10px;
+      margin-right: 15px;
+      margin-top: 8px;
+      height: 30px;
+    }
+    .ol-pay-text{
+      text-decoration: none;
+      color: white;
+    }
+    .order-now{
+      margin-left: 36px;
+      color: white;
+    }
+    .hotline{
+      color: white;
+    }
+    .hotline:hover{
+      color: #219ebc;
+    }
+    .main-header{
+      position: fixed;
+      width: 100%;
+      top: 0px;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+      height: 100px;
+      background-color: #219ebc;
+    }
+    .logo{
+      flex: 1;
+    }
+    .logo-img{
+      height: 100px;
+      margin-left: 8px;
+    }
+    .nav-bar{
+      flex: 2;
+      display: flex;
+      justify-content: center;
+    }
+    .nav-bar button{
+      background-color: transparent;
+      color: #023047;
+      border: none;
+      font-size: 15px;
+      margin: 15px;
+      font-family: Montserrat;
+    }
+    .nav-bar button:hover{
+      color: hsl(200, 99%, 30%);
+    }
+    .user-nav-bar{
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      justify-content: right;
+      padding-right: 30px;
+    }
+    .user-nav-bar button{
+      background-color: transparent;
+      border: none;
+      font-size: 20px;
+      margin: 8px;
+      color: #023047;
+      transition: transform .2s;
+    }
+    .user-nav-bar button:hover{
+      transform: scale(1.2);
+    }
+    .favorite{
+      position: relative;
+    }
+    .fav-count{
+      position: absolute;
+      top: 26px;
+      right: -5px;
+      background-color: hsl(0, 100%, 64%);
+      font-size: 12px;
+      color: #f4f4f4;
+      padding: 0px 4px;
+      padding-top: 1px;
+      border-radius: 50%;
+      box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+    }
+    .cart{
+      position: relative;
+    }
+    .cart-count{
+      position: absolute;
+      top: 26px;
+      right: 0px;
+      background-color: hsl(0, 100%, 64%);
+      font-size: 12px;
+      color: #f4f4f4;
+      padding: 0px 4px;
+      padding-top: 1px;
+      border-radius: 50%;
+      box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+    }
+    .image-container{
+      display: flex;
+      width: 100%;
+      height: 500px;
+      margin-top: 100px;
+      object-fit: contain;
+      position: relative;
+    }
+    .image-content{
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+    .prev-button,
+    .next-button {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 80%);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      font-size: 25px;
+      font-family: Montserrat;
+      padding: 8px 16px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+    .prev-button {
+      left: 35px;
+      top: 240px;
+    }
+    .next-button {
+      right: 35px;
+      top: 240px;
+    }
+    .image-container:hover .prev-button,
+    .image-container:hover .next-button,
+    .prev-button:hover,
+    .next-button:hover {
+      opacity: 1;
+    }
+    .prev-button:hover,
+    .next-button:hover {
+      background-color: rgba(0, 0, 0, 0.288);
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <button class="map-button">
+      <a href="https://www.google.com/maps/place/Bulihan,+Cavite/@14.2816254,120.9919141,16z/data=!3m1!4b1!4m6!3m5!1s0x3397d61ba9d31a99:0xca401a2de2d58b5a!8m2!3d14.2813243!4d120.9976694!16s%2Fg%2F1td3p05p?entry=ttu" class="map-link">
+        <i class="fa-solid fa-map-location-dot"></i></a>
+    </button>
+    <p class="order-now">ORDER NOW <a href="https://contacts.google.com/" class="hotline">0621-2021</a></p>
+    <button class="ol-pay-button"><a href="https://www.bdo.com.ph/" class="ol-pay-text">ONLINE PAYMENT</a></button>
+  </div>
+  <div class="main-header">
+    <div class="logo">
+      <img src="images/Blue-bg-Rice-on-the-go.png" alt="ROTG" class="logo-img">
+    </div>
+    <div class="nav-bar">
+      <button>HOME</button>
+      <button>OUR STORY</button>
+      <button>MENU</button>
+      <button>SERVICES</button>
+      <button>STORES</button>
+    </div>
+    <div class="user-nav-bar">
+      <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      <button class="favorite">
+        <i class="fa-regular fa-heart"></i>
+        <div class="fav-count">0</div>
+      </button>
+      <button class="cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <div class="cart-count">0</div>
+      </button>
+      <button><i class="fa-regular fa-user"></i></button>
+    </div>
+  </div>
+  <div class="image-slider">
+    <div class="image-container">
+      <img src="images/pic-2.webp" class="image-content">
+      <div class="slider-button">
+        <button class="prev-button" onclick="prev();">&lt;</button>
+        <button class="next-button" onclick="next();">&gt;</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let sliderImage = document.querySelector('.image-content');
+    let images = ['pic-2.webp','pic-1.jpg','pic-3.jpg','pic-4.jpg'];
+    let i = 0;
+
+    function prev(){
+      if(i <= 0) i = images.length;
+      i--;
+      setImg();
+    }
+    function next(){
+      if(i >= images.length-1) i = -1;
+      i++;
+      return setImg();
+    }
+    function setImg(){
+      return sliderImage.setAttribute('src', 'images/' + images[i]);
+    }
+  </script>
+</body>
+</html>
