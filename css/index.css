@@ -43,7 +43,7 @@ body{
   color: #219ebc;
 }
 .main-header{
-  position: absolute;
+  position: absolute; /*Temporarily fix the main header bug*/
   width: 100%;
   top: 0px;
   display: flex;
