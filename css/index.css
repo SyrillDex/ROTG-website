@@ -167,3 +167,9 @@ body{
 .next-button:hover {
   background-color: rgba(0, 0, 0, 0.288);
 }
+.note{
+  display: flex;
+  justify-content: center;
+  background-color: red;
+  color: white;
+}
